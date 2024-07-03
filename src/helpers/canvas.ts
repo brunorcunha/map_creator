@@ -161,4 +161,17 @@ export class CanvasWebGL {
       this.drawDashedTile(mouse, [-pos[0] % 32, -pos[1] % 32]);
     }
   }
+
+  static clear() {
+    if (!this.context) {
+      throw new Error('Canvas context not found');
+    }
+
+    // Ajusta o tamanho do canvas para o tamanho da viewport
+    this.canvas.width = window.innerWidth - 334;
+    this.canvas.height = window.innerHeight - 172;
+
+    // Limpa o canvas
+    this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+  }
 }

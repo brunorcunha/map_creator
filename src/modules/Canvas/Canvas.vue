@@ -65,13 +65,14 @@ export default class Canvas extends Vue {
   }
 
   @Watch('layers')
-  onLayersChange(val: AppLayer[]) {
+  onLayersChange() {
     this.draw();
   }
 
-  @Watch('currentFile')
-  onCurrentFileChange() {
-    this.draw();
+  @Watch('file')
+  onFileChange(val: number) {
+    if (!val) CanvasWebGL.clear();
+    else this.draw();
   }
 
   @Watch('currentTilemap')
@@ -164,7 +165,10 @@ export default class Canvas extends Vue {
   }
 
   async draw() {
-    if (this.file == null) return;
+    if (this.file == null) {
+      CanvasWebGL.clear();
+      return;
+    }
 
     this.loading = true;
 
@@ -193,9 +197,9 @@ export default class Canvas extends Vue {
         // Mostra na view principal
         CanvasWebGL.drawImage(this.file.image, this.pos);
       }
-
-      this.loading = false;
     }
+
+    this.loading = false;
   }
 }
 </script>
@@ -210,5 +214,7 @@ export default class Canvas extends Vue {
   height: 100%;
   background-color: #1e1e1e;
   border-right: 3px solid black;
+  background-image: url(/blank_space.png);
+  background-position: 70px 15px;
 }
 </style>

@@ -57,6 +57,7 @@ export default class MiniMapa extends Vue {
     if (!divMap || !this.file) return;
     divMap.style.width = `${(this.file.content.width * 32) / 12.374}px`;
     divMap.style.height = `${(this.file.content.height * 32) / 12.374}px`;
+    this.onResize();
   }
 
   mounted() {

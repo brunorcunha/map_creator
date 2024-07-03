@@ -27,6 +27,8 @@ export default class Tabs extends Vue {
     this.appStore.files.splice(index, 1);
     if (this.currentFile === index) {
       this.currentFile = this.files.length ? this.files.length - 1 : null;
+    } else if (this.currentFile && this.currentFile > index) {
+      this.currentFile--;
     }
   }
 }
