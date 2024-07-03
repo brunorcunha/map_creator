@@ -54,7 +54,7 @@ export default class TileMapGrid extends Vue {
         const y = Array.from(row.parentElement.children).indexOf(row);
         const x = Array.from(row.children).indexOf(cell);
         const id = y * 20 + x + 1;
-        const astar = this.astar?.[id] === 1 ? 'Bloqueado' : this.astar?.[id] === 2 ? 'Semi-Bloqueado' : 'Desbloqueado';
+        const astar = this.astar?.[id] === 1 ? 'Blocked' : this.astar?.[id] === 2 ? 'Soft' : 'Free';
         this.gridInfo = `[${x}, ${y}] • ${id} • ${astar}`;
       }
     });

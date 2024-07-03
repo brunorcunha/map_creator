@@ -132,12 +132,12 @@ export default class Canvas extends Vue {
           let str = `${index} • [${tile[0]}, ${tile[1]}]`;
           if (id1) {
             const astar = this.astar?.[id1[2] + 1];
-            const astar1 = astar === 1 ? 'Bloqueado' : astar === 2 ? 'Semi-Bloqueado' : 'Desbloqueado';
+            const astar1 = astar === 1 ? 'Blocked' : astar === 2 ? 'Soft' : 'Free';
             str += ` • ID1 ${id1[2]} (${astar1})`;
           }
           if (id2) {
             const astar = this.astar?.[id2[2] + 1];
-            const astar2 = astar === 1 ? 'Bloqueado' : astar === 2 ? 'Semi-Bloqueado' : 'Desbloqueado';
+            const astar2 = astar === 1 ? 'Blocked' : astar === 2 ? 'Soft' : 'Free';
             str += ` • ID2 ${id2[2]} (${astar2})`;
           }
           this.tileInfo = str;

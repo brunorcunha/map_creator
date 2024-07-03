@@ -42,7 +42,7 @@ export default class Toolbar extends Vue {
   <input ref="file" type="file" style="display: none" multiple />
   <v-app-bar flat class="px-3">
     <v-btn-group rounded="lg">
-      <v-tooltip text="Novo Mapa">
+      <v-tooltip text="New Map">
         <template #activator="{ props }">
           <v-btn class="px-0" v-bind="props" disabled>
             <v-icon size="x-large">mdi-file-star-four-points</v-icon>
@@ -50,7 +50,7 @@ export default class Toolbar extends Vue {
         </template>
       </v-tooltip>
 
-      <v-tooltip text="Abrir Mapa">
+      <v-tooltip text="Open Map">
         <template #activator="{ props }">
           <v-btn class="px-0" v-bind="props" @click="openFile">
             <v-icon size="x-large">mdi-folder-open</v-icon>
@@ -58,7 +58,7 @@ export default class Toolbar extends Vue {
         </template>
       </v-tooltip>
 
-      <v-tooltip text="Salvar Mapa">
+      <v-tooltip text="Save Map">
         <template #activator="{ props }">
           <v-btn class="px-0" v-bind="props" disabled>
             <v-icon size="x-large">mdi-content-save</v-icon>
@@ -70,7 +70,7 @@ export default class Toolbar extends Vue {
     <v-divider vertical inset class="mx-2" />
 
     <v-btn-group rounded="lg">
-      <v-tooltip text="Desfazer">
+      <v-tooltip text="Undo">
         <template #activator="{ props }">
           <v-btn class="px-0" v-bind="props" disabled>
             <v-icon size="x-large">mdi-undo</v-icon>
@@ -78,7 +78,7 @@ export default class Toolbar extends Vue {
         </template>
       </v-tooltip>
 
-      <v-tooltip text="Refazer">
+      <v-tooltip text="Redo">
         <template #activator="{ props }">
           <v-btn class="px-0" v-bind="props" disabled>
             <v-icon size="x-large">mdi-redo</v-icon>
@@ -90,7 +90,7 @@ export default class Toolbar extends Vue {
     <v-divider vertical inset class="mx-2" />
 
     <v-btn-toggle rounded="lg" mandatory disabled>
-      <v-tooltip text="Desenhar">
+      <v-tooltip text="Draw">
         <template #activator="{ props }">
           <v-btn class="px-0" v-bind="props">
             <v-icon size="x-large">mdi-lead-pencil</v-icon>
@@ -98,7 +98,7 @@ export default class Toolbar extends Vue {
         </template>
       </v-tooltip>
 
-      <v-tooltip text="Apagar">
+      <v-tooltip text="Erase">
         <template #activator="{ props }">
           <v-btn class="px-0" v-bind="props">
             <v-icon size="x-large">mdi-eraser</v-icon>

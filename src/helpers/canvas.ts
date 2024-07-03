@@ -151,7 +151,8 @@ export class CanvasWebGL {
     this.canvas.width = window.innerWidth - 334;
     this.canvas.height = window.innerHeight - 172;
     // Limpa o canvas
-    this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    this.context.fillStyle = '#1e1e1e';
+    this.context.fillRect(0, 0, this.canvas.width, this.canvas.height);
 
     // Desenha a imagem
     this.context.drawImage(image, -pos[0], -pos[1]);

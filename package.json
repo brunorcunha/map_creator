@@ -14,7 +14,7 @@
     "three": "^0.166.0",
     "vue": "^3.4.31",
     "vue-facing-decorator": "^2.1.20",
-    "vuetify": "^3.6.10"
+    "vuetify": "^3.6.11"
   },
   "devDependencies": {
     "@babel/types": "^7.23.0",
